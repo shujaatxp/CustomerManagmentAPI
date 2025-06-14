@@ -9,7 +9,7 @@ public class CommunicationService : ICommunicationService
 {
     private readonly AppDbContext _context;
 
-    public CommunicationService(AppDbContext context)
+    public CommunicationService(Domain.Interfaces.IRepository<Template> @object, AppDbContext context)
     {
         _context = context;
     }

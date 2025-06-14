@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36203.30 d17.14
+VisualStudioVersion = 17.14.36203.30
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationService.Domain", "CommunicationService.Domain\CommunicationService.Domain.csproj", "{31145BE8-79A3-4EE4-A057-875FD4279E43}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationService.Infrastructure", "CommunicationService.Infrastructure\CommunicationService.Infrastructure.csproj", "{1AD6BEF8-C092-4098-BAA4-064E3FE6638A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationService.API", "CommunicationService.API\CommunicationService.API.csproj", "{9BA455D0-94DA-4D3E-A3C1-78AA4C604653}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationService.Tests", "CommunicationService.Tests\CommunicationService.Tests.csproj", "{3D8E65CF-5155-2A81-173C-14AE740CFE75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9BA455D0-94DA-4D3E-A3C1-78AA4C604653}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BA455D0-94DA-4D3E-A3C1-78AA4C604653}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BA455D0-94DA-4D3E-A3C1-78AA4C604653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8E65CF-5155-2A81-173C-14AE740CFE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8E65CF-5155-2A81-173C-14AE740CFE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8E65CF-5155-2A81-173C-14AE740CFE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8E65CF-5155-2A81-173C-14AE740CFE75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
