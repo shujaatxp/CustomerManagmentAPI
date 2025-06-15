@@ -1,6 +1,6 @@
 ﻿# Communication Domain-Driven Microservice Ready with API Gateway and Authentication
 
-This repository is a sample implementation of a microservices / Onion architure with  in .NET 8, demonstrating:
+This repository is a sample implementation of a modular microservices / onion architure with  in .NET 8, demonstrating:
 
 - AuthenticationService.API (JWT token generation)
 - CommunicationService.API (manages templates, customers, and sending communications)
