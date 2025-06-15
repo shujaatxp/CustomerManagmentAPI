@@ -1,6 +1,6 @@
-﻿# Communication Domain-Driven Microservice Ready with API Gateway and Authentication
+# Communication Microservice with API Gateway and Authentication
 
-This repository is a sample implementation of a microservices / Onion architure with  in .NET 8, demonstrating:
+This repository is a sample implementation of a microservices architecture in .NET 8, demonstrating:
 
 - AuthenticationService.API (JWT token generation)
 - CommunicationService.API (manages templates, customers, and sending communications)
@@ -94,26 +94,23 @@ This repository is a sample implementation of a microservices / Onion architure 
     - `CommunicationService.ApiGateway`
 4. Use Swagger UI or Postman to test endpoints.
 
-1. ![](swagger.png)
 ---
 
-### Postman file collection
-- Swagger file is available at '/Denske CCM.postman_collection.json'.
+## ✨ Credits
+
+Created by Syed Shujaat Ali as a modular microservice demo project.
 
 ---
 
 ## 📁 Project Structure
 
-![](structure.png)
-1. **AuthenticationService.API**: Handles user authentication and JWT generation.
-2. **CommunicationService.API**: Manages templates, customers, and communication logs.
-3. **CommunicationService.ApiGateway**: Ocelot-based API gateway that routes requests and validates JWT tokens.
-4. **CommunicationService.Infrastructure**: Contains shared infrastructure code, such as database context and migrations.
-5. **CommunicationService.Domain**: Contains domain models and interfaces.
-6. **CommunicationService.Application**: Contains application logic, services, and DTOs.
-7. **CommunicationService.Tests**: Contains unit and integration tests for the application.
+```
+structure.png
+```
 
 ---
-## ✨ Credits
 
-Created by Syed Shujaat Ali as a modular microservice demo project.
+## 🛡️ Disclaimer
+
+This is a simplified demo for learning purposes and not intended for production without further enhancements in security, logging, configuration management, and error handling.
+

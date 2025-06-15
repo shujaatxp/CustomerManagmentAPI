@@ -6,22 +6,37 @@ using System.Text;
 
 namespace AuthenticationService.API.Controllers;
 
+/// <summary> Syed Shujaat Ali
+/// API controller for authentication and JWT token generation.
+/// </summary>
 [ApiController]
 [Route("api/auth")]
 public class AuthController : ControllerBase
 {
     private readonly IConfiguration _configuration;
 
+    /// <summary> Syed Shujaat Ali
+    /// Initializes a new instance of the <see cref="AuthController"/> class.
+    /// </summary>
+    /// <param name="configuration">The application configuration instance.</param>
     public AuthController(IConfiguration configuration)
     {
         _configuration = configuration;
     }
 
+    /// <summary> Syed Shujaat Ali
+    /// Authenticates a user and returns a JWT token if credentials are valid.
+    /// </summary>
+    /// <param name="request">The login request containing username and password.</param>
+    /// <returns>An Ok result with the JWT token if successful; otherwise, Unauthorized.</returns>
     [HttpPost("login")]
     public IActionResult Login([FromBody] LoginRequest request)
     {
-        // Mocked login, replace with database check
-        if (request.Username == "admin" && request.Password == "password")
+        // Read credentials from appsettings.json
+        var validUsername = _configuration["Auth:Username"];
+        var validPassword = _configuration["Auth:Password"];
+
+        if (request.Username == validUsername && request.Password == validPassword)
         {
             var token = GenerateJwtToken(request.Username);
             return Ok(new { Token = token });
@@ -30,6 +45,11 @@ public class AuthController : ControllerBase
         return Unauthorized("Invalid credentials");
     }
 
+    /// <summary> Syed Shujaat Ali
+    /// Generates a JWT token for the specified username.
+    /// </summary>
+    /// <param name="username">The username for which to generate the token.</param>
+    /// <returns>A JWT token string.</returns>
     private string GenerateJwtToken(string username)
     {
         var secretKey = _configuration["Jwt:Key"];

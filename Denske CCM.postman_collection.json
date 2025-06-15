@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "5981ba3f-6278-4279-839b-8d60027ea755",
+		"name": "Denske CCM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3333988"
+	},
+	"item": [
+		{
+			"name": "Message History",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImFjZmEyMjAzLTIzZWQtNGRkYi1iY2Q2LTQyNTkwNWVhOWI2MyIsImV4cCI6MTc1MDAwNzg0NCwiaXNzIjoiRGVtb0lzc3VlciIsImF1ZCI6IkRlbW9BdWRpZW5jZSJ9.3PWKDVzjcQt6nyMpqBiaT6lUx3VAvMJN-bLKsS4gwFc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6000/communications/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"communications",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImQ5NjFiNzQ1LTAzNTYtNDUwOC1iMTQwLTI1ZTRkMzZiNTY2ZiIsImV4cCI6MTc1MDAwNjAyOSwiaXNzIjoiRGVtb0lzc3VlciIsImF1ZCI6IkRlbW9BdWRpZW5jZSJ9.pYo2B488Hjj7QdxnucT9y40cjyiR1nq9ilCGz43EFJI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"name\": \"john\",\r\n  \"email\": \"john@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/customer/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"customer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"denske\",\r\n  \"password\": \"ccm\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Template",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImQ5NjFiNzQ1LTAzNTYtNDUwOC1iMTQwLTI1ZTRkMzZiNTY2ZiIsImV4cCI6MTc1MDAwNjAyOSwiaXNzIjoiRGVtb0lzc3VlciIsImF1ZCI6IkRlbW9BdWRpZW5jZSJ9.pYo2B488Hjj7QdxnucT9y40cjyiR1nq9ilCGz43EFJI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Email registered\",\r\n  \"subject\": \"Email registered message\",\r\n  \"body\": \"Hi {{Name}}, we’ve registered your email as {{Email}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/template/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"template",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6ImQ5NjFiNzQ1LTAzNTYtNDUwOC1iMTQwLTI1ZTRkMzZiNTY2ZiIsImV4cCI6MTc1MDAwNjAyOSwiaXNzIjoiRGVtb0lzc3VlciIsImF1ZCI6IkRlbW9BdWRpZW5jZSJ9.pYo2B488Hjj7QdxnucT9y40cjyiR1nq9ilCGz43EFJI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Email registered\",\r\n  \"subject\": \"Email registered message\",\r\n  \"body\": \"Hi {{Name}}, we’ve registered your email as {{Email}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5004/api/communications?templateId=e9c530e8-10e9-4a31-ad89-3a1eabf38649&customerId=4eb8a6f9-44ba-4ff6-98f6-4f0a8adf3003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5004",
+					"path": [
+						"api",
+						"communications"
+					],
+					"query": [
+						{
+							"key": "templateId",
+							"value": "e9c530e8-10e9-4a31-ad89-3a1eabf38649"
+						},
+						{
+							"key": "customerId",
+							"value": "4eb8a6f9-44ba-4ff6-98f6-4f0a8adf3003"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
