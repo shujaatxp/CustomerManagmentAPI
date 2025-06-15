@@ -111,7 +111,7 @@ This repository is a sample implementation of a modular microservices / onion ar
 ---
 
 ### Postman file collection
-- Swagger file is available at '/Denske CCM.postman_collection.json'.
+- Postman file is available at '/Denske CCM.postman_collection.json'.
 
 ---
 
