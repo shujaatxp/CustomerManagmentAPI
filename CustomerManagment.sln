@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationService.API", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationService.Tests", "CommunicationService.Tests\CommunicationService.Tests.csproj", "{3D8E65CF-5155-2A81-173C-14AE740CFE75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicatonService.ApiGateway", "ApiGateway\CommunicatonService.ApiGateway.csproj", "{ABE66B30-BD47-A7B2-B17B-5BA67959B026}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService.API", "AuthenticationService.API\AuthenticationService.API.csproj", "{ABC03A7E-0C1E-8DFB-DFD7-4BE9C9814CFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{3D8E65CF-5155-2A81-173C-14AE740CFE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D8E65CF-5155-2A81-173C-14AE740CFE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D8E65CF-5155-2A81-173C-14AE740CFE75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE66B30-BD47-A7B2-B17B-5BA67959B026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE66B30-BD47-A7B2-B17B-5BA67959B026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE66B30-BD47-A7B2-B17B-5BA67959B026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE66B30-BD47-A7B2-B17B-5BA67959B026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC03A7E-0C1E-8DFB-DFD7-4BE9C9814CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC03A7E-0C1E-8DFB-DFD7-4BE9C9814CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC03A7E-0C1E-8DFB-DFD7-4BE9C9814CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC03A7E-0C1E-8DFB-DFD7-4BE9C9814CFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CommunicationService.API.Controllers;
 
-[Authorize]
 [ApiController]
 [Route("api/communications")]
 public class CommunicationController : ControllerBase
@@ -21,12 +20,11 @@ public class CommunicationController : ControllerBase
     {
         var result = await _communicationService.SendToCustomerAsync(templateId, customerId);
 
-        if (result.Contains("not found", StringComparison.OrdinalIgnoreCase))
-        {
+        if (result == null) { 
             return NotFound(result);
         }
 
-        return Ok(new { message = result });
+        return Ok(result);
     }
 
     [HttpGet("history")]

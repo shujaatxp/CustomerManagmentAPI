@@ -1,11 +1,13 @@
 ﻿using CommunicationService.Application.DTOs;
 using CommunicationService.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CommunicationService.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+
 public class TemplateController : ControllerBase
 {
     private readonly ITemplateService _service;

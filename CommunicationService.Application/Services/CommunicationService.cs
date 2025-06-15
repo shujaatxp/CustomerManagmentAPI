@@ -14,32 +14,37 @@ public class CommunicationService : ICommunicationService
         _context = context;
     }
 
-    public async Task<string> SendToCustomerAsync(Guid templateId, Guid customerId)
+    public async Task<CommunicationResult> SendToCustomerAsync(Guid templateId, Guid customerId)
     {
         var customer = await _context.Customers.FirstOrDefaultAsync(c => c.Id == customerId);
-        if (customer == null) return "Customer not found.";
+        if (customer == null) return null;
 
         var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == templateId);
-        if (template == null) return "Template not found.";
+        if (template == null) return null;
 
         var subject = Replace(template.Subject, customer);
         var body = Replace(template.Body, customer);
 
-        var message = $"Sending Email To: {customer.Email}\nSubject: {subject}\nBody: {body}";
-        Console.WriteLine(message);
-
+        // Save communication history
         _context.SendHistories.Add(new MessageLogging
         {
             TemplateId = templateId,
             CustomerId = customerId,
             Subject = subject,
-            Body = body
+            Body = body,
+            SentAt = DateTime.UtcNow  // Optional: add a SentAt field to the table
         });
 
         await _context.SaveChangesAsync();
 
-        return message;
+        // Return just the rendered message body (or full message if needed)
+        return new CommunicationResult
+        {
+            Subject = subject,
+            Body = body
+        };
     }
+
 
     public async Task<List<MessageLoggingDto>> GetMessageLoggingHistoryAsync()
     {

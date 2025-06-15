@@ -1,8 +1,10 @@
-﻿namespace CommunicationService.Application.Interfaces;
+﻿using CommunicationService.Domain.Entities;
+
+namespace CommunicationService.Application.Interfaces;
 
 public interface ICommunicationService
 {
-    Task<string> SendToCustomerAsync(Guid templateId, Guid customerId);
+    Task<CommunicationResult> SendToCustomerAsync(Guid templateId, Guid customerId);
 
     Task<List<MessageLoggingDto>> GetMessageLoggingHistoryAsync();
 
