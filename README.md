@@ -8,6 +8,19 @@ This repository is a sample implementation of a modular microservices / onion ar
 
 ---
 
+## 📁 Project Structure
+
+![](structure.png)
+1. **AuthenticationService.API**: Handles user authentication and JWT generation.
+2. **CommunicationService.API**: Manages templates, customers, and communication logs.
+3. **CommunicationService.ApiGateway**: Ocelot-based API gateway that routes requests and validates JWT tokens.
+4. **CommunicationService.Infrastructure**: Contains shared infrastructure code, such as database context and migrations.
+5. **CommunicationService.Domain**: Contains domain models and interfaces.
+6. **CommunicationService.Application**: Contains application logic, services, and DTOs.
+7. **CommunicationService.Tests**: Contains unit and integration tests for the application.
+
+---
+
 ## 🧱 Projects Overview
 
 ### 1. **AuthenticationService.API**
@@ -102,16 +115,6 @@ This repository is a sample implementation of a modular microservices / onion ar
 
 ---
 
-## 📁 Project Structure
-
-![](structure.png)
-1. **AuthenticationService.API**: Handles user authentication and JWT generation.
-2. **CommunicationService.API**: Manages templates, customers, and communication logs.
-3. **CommunicationService.ApiGateway**: Ocelot-based API gateway that routes requests and validates JWT tokens.
-4. **CommunicationService.Infrastructure**: Contains shared infrastructure code, such as database context and migrations.
-5. **CommunicationService.Domain**: Contains domain models and interfaces.
-6. **CommunicationService.Application**: Contains application logic, services, and DTOs.
-7. **CommunicationService.Tests**: Contains unit and integration tests for the application.
 
 ---
 ## ✨ Credits
