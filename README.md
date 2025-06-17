@@ -110,10 +110,22 @@ This repository is a sample implementation of a modular microservices / onion ar
 1. ![](swagger.png)
 ---
 
-### Postman file collection
+### Postman file collection using Oelot API Gateway
 - Postman file is available at '/Denske CCM.postman_collection.json'.
 
----
+- ## Endpoints:
+- ### Login and Get Token
+  1. http://localhost:5000/api/auth/login
+  ### Create Template
+  2. http://localhost:6000/template/
+  ### Create Customer
+  3. http://localhost:6000/customer/
+  ### Send Communication
+  4. http://localhost:5004/api/communications?templateId=e9c530e8-10e9-4a31-ad89-3a1eabf38649&customerId=4eb8a6f9-44ba-4ff6-98f6-4f0a8adf3003
+  ### View Communication History
+  5. http://localhost:6000/communications/history
+   
+- 
 
 
 ---
